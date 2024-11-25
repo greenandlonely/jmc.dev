@@ -1,0 +1,85 @@
+.cv {
+  margin: 2rem 0 5rem;
+  background: var(--white) url(../images/dots-horizontal.png) repeat-x bottom
+    left;
+  background-size: auto 3rem;
+  color: var(--charcoal);
+
+  &__header {
+    border-bottom: 1px solid var(--charcoal);
+    padding-bottom: 0.25rem;
+  }
+
+  &__content {
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+
+    @include bp(lg) {
+      padding-top: 2.5rem;
+      display: grid;
+      gap: 2.5rem 6rem;
+      grid-template-columns: 73fr 27fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+
+  &__heading {
+    border-bottom: 1px solid var(--grey);
+  }
+
+  &__profile {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+
+    @include bp(lg) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+  }
+
+  &__experience {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+
+    @include bp(lg) {
+      grid-row: 2 / span 4;
+      grid-column: 1;
+    }
+  }
+
+  &__skills {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+
+    @include bp(lg) {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
+  }
+
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-lg);
+
+    @include bp(md-only) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__contact {
+    grid-column: 1;
+
+    @include bp(lg) {
+      grid-column: 2;
+    }
+  }
+
+  &__refs {
+    grid-column: 2;
+  }
+}
