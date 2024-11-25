@@ -1,0 +1,40 @@
+.grid {
+  $self: &;
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+
+  @include bp(md) {
+    gap: 75px;
+  }
+
+  &__col {
+    width: 100%;
+    flex: 1;
+    flex-shrink: 0;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--stackable {
+    @include bp(sm-max) {
+      flex-direction: column;
+
+      > #{$self}__col {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+
+      &#{$self}--reverse,
+      &.mob\:#{$self}--reverse {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
