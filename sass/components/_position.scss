@@ -1,0 +1,25 @@
+.position {
+  @include bare-list;
+  margin-bottom: 2rem;
+
+  @include bp(md) {
+    margin-bottom: 2.5rem;
+  }
+
+  &__meta {
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0 0.75rem;
+  }
+
+  &__title {
+    background: transparent url(../images/dot-grey.svg) no-repeat center right;
+    background-size: 1rem;
+    padding-right: 1.75rem;
+  }
+
+  &__url {
+    text-transform: none;
+  }
+}

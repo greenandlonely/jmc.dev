@@ -1,0 +1,63 @@
+.section {
+  $self: &;
+  $section-min-height: 900px;
+  $section-padding: 2.5rem;
+  $section-padding--lg: 4rem;
+  $section-bg-size: 3rem;
+
+  position: relative;
+  color: var(--white);
+  padding: $section-padding 0;
+  overflow: hidden;
+
+  @include bp(md) {
+    min-height: $section-min-height;
+    height: 100vh;
+    max-height: 1050px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include bp(lg) {
+    padding: $section-padding--lg 0;
+  }
+
+  &__jump {
+    position: absolute;
+    bottom: 0;
+    left: $page-gutter;
+    width: 30px;
+
+    @include bp(md) {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+    }
+  }
+
+  &--intro {
+    color: var(--teal);
+    padding-top: 0;
+    min-height: calc((var(--vh, 1vh) * 100));
+  }
+
+  &--about {
+    background-color: var(--teal);
+  }
+
+  &--work {
+    background-color: var(--yellow);
+    color: var(--charcoal);
+  }
+
+  &--clients {
+    background-color: var(--red);
+  }
+
+  &--contact {
+    background: var(--charcoal) url(../images/dots-horizontal.png) repeat-x
+      bottom left;
+    background-size: auto 48px;
+    padding-bottom: $section-padding + $section-bg-size;
+  }
+}

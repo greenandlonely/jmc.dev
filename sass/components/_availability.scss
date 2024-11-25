@@ -1,0 +1,29 @@
+.availability {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: bold;
+
+  @include bp(md) {
+    gap: 2.5rem;
+  }
+
+  &__title {
+  }
+
+  &__value {
+    text-transform: uppercase;
+
+    &--available {
+      color: var(--teal-light);
+    }
+
+    &--partial {
+      color: var(--yellow-light);
+    }
+
+    &--booked {
+      color: var(--red-light);
+    }
+  }
+}

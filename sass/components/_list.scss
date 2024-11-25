@@ -1,0 +1,65 @@
+.list {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-xxs);
+  list-style: none outside none;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--spacer-sm);
+
+    &::before {
+      content: "";
+      display: block;
+      background-size: 1rem;
+      background-repeat: no-repeat;
+      background-position: 0 0.275rem;
+      min-width: 1.2rem;
+      min-height: 1.2rem;
+    }
+  }
+
+  &--teal {
+    #{$self}__item {
+      &::before {
+        background-image: url(../images/dot-teal.svg);
+      }
+    }
+  }
+
+  &--yellow {
+    #{$self}__item {
+      &::before {
+        background-image: url(../images/dot-yellow.svg);
+      }
+    }
+  }
+
+  &--red {
+    #{$self}__item {
+      &::before {
+        background-image: url(../images/dot-red.svg);
+      }
+    }
+  }
+
+  &--grey {
+    #{$self}__item {
+      &::before {
+        background-image: url(../images/dot-grey.svg);
+      }
+    }
+  }
+
+  &--charcoal {
+    #{$self}__item {
+      &::before {
+        background-image: url(../images/dot-charcoal.svg);
+      }
+    }
+  }
+}

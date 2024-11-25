@@ -1,0 +1,10 @@
+.logo {
+  //   max-height: 200px;
+  z-index: 100;
+
+  @include bp(md) {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+}
