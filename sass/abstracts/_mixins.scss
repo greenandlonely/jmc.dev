@@ -1,0 +1,49 @@
+// Breakpoint (bp) mixin
+@mixin bp($media-query) {
+  @if $media-query == xs {
+    @media only screen and (max-width: $breakpoint-sm - 1px) {
+      @content;
+    }
+  }
+  @if $media-query == sm {
+    @media only screen and (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+  @if $media-query == sm-max {
+    @media only screen and (max-width: $breakpoint-md - 1px) {
+      @content;
+    }
+  }
+  @if $media-query == md {
+    @media only screen and (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+  @if $media-query == md-only {
+    @media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+      @content;
+    }
+  }
+  @if $media-query == lg {
+    @media only screen and (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+  @if $media-query == xl {
+    @media only screen and (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+  @if $media-query == xxl {
+    @media only screen and (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
+}
+
+@mixin bare-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}

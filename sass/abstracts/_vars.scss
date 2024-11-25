@@ -1,0 +1,48 @@
+//-- SASS VARIABLES --//
+
+//breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 420px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1400px;
+$breakpoint-xxl: 1680px;
+
+$lap-start: 681px;
+$desk-start: 1025px;
+
+// typography
+$base-font: "Geomanist", Helvetica, Arial, sans-serif;
+$cv-font: "Merriweather Sans", sans-serif;
+$text-xxl: 3.75rem;
+$text-xl: 2.75rem;
+$text-lg: 2.25rem;
+$text-md: 1.75rem;
+$text-sm: 1.5rem;
+$text-xs: 1.25rem;
+$text-xxs: 1rem;
+
+// metrics
+$page-gutter: 1.5rem;
+
+//-- CUSTOM PROPERTIES --//
+:root {
+  --white: #fff;
+  --teal: #268383;
+  --teal-light: #53b0b0;
+  --yellow: #fbc46e;
+  --yellow-light: #fbca7d;
+  --red: #cd4b37;
+  --red-light: #e47867;
+  --grey: #dadad9;
+  --charcoal: #434342;
+  --charcoal-light: #606060;
+
+  // spacers
+  --spacer: 1rem;
+  --spacer-xxs: 0.125rem;
+  --spacer-xs: 0.25rem;
+  --spacer-sm: 0.5rem;
+  --spacer-md: 0.75rem;
+  --spacer-lg: 1.25rem;
+}
