@@ -1,0 +1,51 @@
+html,
+body {
+  font-family: $base-font;
+}
+
+body {
+  font-family: $base-font;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--white);
+  color: var(--white);
+  position: relative;
+  margin: 0;
+}
+
+a {
+  color: var(--charcoal);
+  outline: none;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: var(--charcoal-light);
+    text-decoration: none;
+  }
+
+  &[target="_blank"] {
+    cursor: alias;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  padding-left: 2.5rem;
+}
+
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+abbr[title] {
+  border: none;
+  cursor: help;
+}
