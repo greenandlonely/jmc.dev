@@ -1,1 +1,1 @@
-# jmc.dev
+# JMC.DEV
