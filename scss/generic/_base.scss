@@ -1,6 +1,10 @@
 html {
   font-family: $base-font;
-  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -8,7 +12,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: var(--white);
-  color: var(--white);
+  color: var(--charcoal);
   position: relative;
   margin: 0;
 }
@@ -36,7 +40,7 @@ img {
 
 ul,
 ol {
-  padding-left: 2.5rem;
+  padding-left: var(--spacer-xl);
 }
 
 figure,
