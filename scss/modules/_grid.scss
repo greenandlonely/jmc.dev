@@ -1,40 +1,77 @@
 .grid {
   $self: &;
+  $grid-gutter--lg: 5rem;
+  $grid-gutter: $grid-gutter--lg / 2;
 
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2.5rem;
+  font-size: inherit;
+  gap: var(--vertical-gap);
 
-  @include bp(md) {
-    gap: 4.5rem;
+  @include bp(lg) {
+    gap: $grid-gutter--lg;
   }
 
   &__col {
     width: 100%;
     flex: 1;
     flex-shrink: 0;
+
+    &.lg\:grid__col--50 {
+      @include bp(lg) {
+        max-width: calc(50% - $grid-gutter);
+        flex-basis: calc(50% - $grid-gutter);
+      }
+    }
   }
 
   &--reverse {
     flex-direction: row-reverse;
   }
 
+  &.lg\:grid--reverse {
+    @include bp(lg) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--forward {
+    flex-direction: row;
+  }
+
+  &.lg\:grid--forward {
+    @include bp(lg) {
+      flex-direction: row;
+    }
+  }
+
   &--stackable {
-    @include bp(sm-max) {
-      flex-direction: column;
+    flex-direction: column;
 
-      > #{$self}__col {
-        max-width: 100%;
-        flex-basis: 100%;
-      }
+    > * + * {
+      margin-block-start: var(--spacer-lg);
 
-      &#{$self}--reverse,
-      &.sm\:#{$self}--reverse {
-        flex-direction: column-reverse;
+      @include bp(lg) {
+        margin-block-start: 0;
       }
+    }
+
+    > #{$self}__col {
+      max-width: 100%;
+      flex-basis: 100%;
+
+      @include bp(lg) {
+        max-width: calc(50% - $grid-gutter);
+        flex-basis: calc(50% - $grid-gutter);
+      }
+    }
+
+    @include bp(lg) {
+      flex-direction: row;
     }
   }
 }
