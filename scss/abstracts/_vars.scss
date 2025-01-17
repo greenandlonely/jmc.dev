@@ -8,42 +8,24 @@ $breakpoint-lg: 1024px;
 $breakpoint-xl: 1400px;
 $breakpoint-xxl: 1680px;
 
-$lap-start: 681px;
-$desk-start: 1025px;
-
 // typography
 $base-font: "Geomanist", Helvetica, Arial, sans-serif;
-$cv-font: "Merriweather Sans", sans-serif;
-$text-xxl: 3.75rem;
-$text-xl: 2.75rem;
-$text-lg: 2.25rem;
-$text-md: 1.75rem;
-$text-sm: 1.5rem;
-$text-xs: 1.25rem;
-$text-xxs: 1rem;
+$text-xxl: 4rem; // 64px
+$text-xl: 2.25rem; // 36px
+$text-lg: 1.625rem; // 26px
+$text-md: 1.3125rem; // 21px
+$text-sm: 1.125rem; // 18px
+$text-xs: 1rem; // 16px
+$text-min: 0.9375rem; // 15px
 
-// metrics
-$page-gutter: 1.5rem;
+// component-specifics
+$page-gutter: 3rem;
+$logo-offset: 2rem;
+$logo-width: 200px;
+$logo-width--md: 100px;
 
-//-- CUSTOM PROPERTIES --//
-:root {
-  --white: #fff;
-  --teal: #268383;
-  --teal-light: #53b0b0;
-  --yellow: #fbc46e;
-  --yellow-light: #fbca7d;
-  --red: #cd4b37;
-  --red-light: #e47867;
-  --grey: #dadad9;
-  --charcoal: #434342;
-  --charcoal-light: #606060;
-
-  // spacers
-  --spacer: 1rem;
-  --spacer-xxs: 0.125rem;
-  --spacer-xs: 0.25rem;
-  --spacer-sm: 0.5rem;
-  --spacer-md: 0.75rem;
-  --spacer-lg: 1.25rem;
-  --spacer-xl: 2rem;
-}
+// animation delays
+$delay-1: 0.25s;
+$delay-2: 0.5s;
+$delay-3: 0.75s;
+$delay-4: 1s;
