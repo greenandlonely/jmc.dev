@@ -1,0 +1,23 @@
+.stack > * + * {
+  margin-block-start: var(--vertical-gap, 1.25em);
+}
+
+.stack--gap-sm > * + * {
+  --vertical-gap: var(--spacer-sm);
+}
+
+.stack--gap-md > * + * {
+  --vertical-gap: var(--spacer-md);
+}
+
+.stack--gap-lg > * + * {
+  --vertical-gap: var(--spacer-lg);
+}
+
+.stack--gap-xl > * + * {
+  --vertical-gap: var(--spacer-xl);
+}
+
+.stack--gap-xxl > * + * {
+  --vertical-gap: var(--spacer-xxl);
+}
