@@ -1,0 +1,38 @@
+//-- CUSTOM PROPERTIES --//
+:root {
+  // colors
+  --white: #fff;
+  --teal: #268383;
+  --teal-light: #53b0b0;
+  --yellow: #fbc46e;
+  --yellow-light: #fbca7d;
+  --red: #cd4b37;
+  --red-light: #e47867;
+  --grey: #dadad9;
+  --charcoal: #434342;
+  --charcoal-light: #606060;
+
+  // spacers
+  --spacer: 1rem;
+  --spacer-neg: -1rem;
+  --spacer-xxs: 0.125rem;
+  --spacer-neg-xxs: -0.125rem;
+  --spacer-xs: 0.25rem;
+  --spacer-neg-xs: -0.25rem;
+  --spacer-sm: 0.5rem;
+  --spacer-neg-sm: -0.5rem;
+  --spacer-md: var(--spacer);
+  --spacer-neg-md: var(--spacer-neg);
+  --spacer-lg: 1.5rem;
+  --spacer-neg-lg: -1.5rem;
+  --spacer-lgr: 2rem;
+  --spacer-neg-lgr: -2rem;
+  --spacer-xl: 2.5rem;
+  --spacer-neg-xl: -2.5rem;
+  --spacer-xxl: 4rem;
+  --spacer-neg-xxl: -4rem;
+  --spacer-huge: 6rem;
+  --spacer-neg-huge: -6rem;
+
+  --container--fluid-mw: clamp(20rem, 100vw, 90rem);
+}

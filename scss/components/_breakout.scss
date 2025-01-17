@@ -1,0 +1,19 @@
+.breakout {
+  $self: &;
+
+  display: block;
+
+  &--sides {
+    margin-left: var(--spacer-neg-md);
+    margin-right: var(--spacer-neg-md);
+    width: calc(100% + var(--spacer-md) + var(--spacer-md));
+    max-width: none;
+  }
+
+  &.md\:breakout--reset {
+    @include bp(md) {
+      margin: 0;
+      width: inherit;
+    }
+  }
+}
