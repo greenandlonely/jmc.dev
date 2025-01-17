@@ -1,13 +1,13 @@
 .position {
   @include bare-list;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacer-lgr);
 
   @include bp(md) {
-    margin-bottom: 2.5rem;
+    margin-bottom: var(--spacer-xl);
   }
 
   &__meta {
-    margin: 0 0 1rem;
+    margin: 0 0 var(--spacer);
     display: flex;
     align-items: center;
     gap: 0 0.75rem;
