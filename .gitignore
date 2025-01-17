@@ -3,3 +3,4 @@ jmc.dev.code-workspace
 node_modules
 _site/
 dist/
+assets/
