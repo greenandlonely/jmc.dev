@@ -1,5 +1,5 @@
 .cv {
-  margin: 2rem 0 5rem;
+  margin: var(--spacer-lgr) 0 5rem;
   background: var(--white) url(../images/dots-horizontal.png) repeat-x bottom
     left;
   background-size: auto 3rem;
@@ -12,15 +12,15 @@
 
   &__content {
     margin: 0 auto;
-    padding-top: 1.5rem;
+    padding-top: var(--spacer-lg);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 1rem;
+    gap: var(--spacer-lgr) var(--spacer);
 
     @include bp(lg) {
-      padding-top: 2.5rem;
+      padding-top: var(--spacer-xl);
       display: grid;
-      gap: 2.5rem 6rem;
+      gap: var(--spacer-xl) var(--spacer-huge);
       grid-template-columns: 73fr 27fr;
       grid-template-rows: auto auto auto auto;
     }
