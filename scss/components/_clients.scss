@@ -1,9 +1,35 @@
 .clients {
-  overflow-x: auto;
-  display: flex;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  grid-gap: var(--spacer);
+  list-style: none outside none;
+  padding: 0;
 
-  &__item {
+  @include bp(sm) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  @include bp(md) {
+    grid-gap: var(--spacer-lg);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  &__logo {
+    object-fit: contain;
     width: 100%;
-    max-width: 10rem;
+    max-width: 7.5rem;
+
+    @include bp(md) {
+      max-width: 9rem;
+    }
+
+    @include bp(lg) {
+      max-width: 10rem;
+    }
   }
 }

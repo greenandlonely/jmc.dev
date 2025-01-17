@@ -1,44 +1,75 @@
 .section {
   $self: &;
-  $section-min-height: 900px;
-  $section-padding: 2.5rem;
+  $section-padding: var(--spacer-xl);
   $section-padding--lg: 4rem;
-  $section-bg-size: 3rem;
+  $section-bg-size: 2.5rem;
+  $section-gutter: calc($page-gutter + $logo-width--md + $logo-offset);
+  $section-gutter--xl: calc($page-gutter + $logo-width + $logo-offset);
 
   position: relative;
   color: var(--white);
   padding: $section-padding 0;
-  overflow: hidden;
 
   @include bp(md) {
-    min-height: $section-min-height;
-    height: 100vh;
-    max-height: 1050px;
+    min-height: calc((var(--vh, 1vh) * 100));
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: $section-gutter;
+    padding-right: $page-gutter;
   }
-  @include bp(lg) {
-    padding: $section-padding--lg 0;
+  @include bp(xl) {
+    padding-left: $section-gutter--xl;
+    padding-right: $section-gutter--xl;
+    padding-top: $section-padding--lg;
+    padding-bottom: $section-padding--lg;
+  }
+
+  &__inner {
+    padding: 0 var(--spacer);
+    z-index: 1000;
+    max-width: var(--container--fluid-mw);
+
+    @include bp(md) {
+      padding: 0;
+    }
+
+    &--narrow {
+      @include bp(md) {
+        max-width: 65ch;
+      }
+    }
   }
 
   &__jump {
-    position: absolute;
-    bottom: 0;
-    left: $page-gutter;
-    width: 30px;
+    display: none;
 
     @include bp(md) {
+      display: block;
+      position: absolute;
+      width: 30px;
       left: 50%;
       transform: translateX(-50%);
       bottom: 40px;
     }
   }
 
+  &__letter {
+    display: none;
+
+    @include bp(lg) {
+      opacity: 0;
+      display: block;
+      z-index: 10;
+      position: absolute;
+      max-height: 90%;
+      max-width: 90%;
+    }
+  }
+
   &--intro {
     color: var(--teal);
     padding-top: 0;
-    min-height: calc((var(--vh, 1vh) * 100));
   }
 
   &--about {
@@ -55,9 +86,14 @@
   }
 
   &--contact {
-    background: var(--charcoal) url(../images/dots-horizontal.png) repeat-x
-      bottom left;
-    background-size: auto 48px;
-    padding-bottom: $section-padding + $section-bg-size;
+    background-color: var(--charcoal);
+    background-image: url("../images/dots-horizontal.png");
+    background-image: image-set(
+      url("../images/dots-horizontal.webp") type("image/webp")
+    );
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    background-size: auto $section-bg-size;
+    padding-bottom: calc($section-padding + $section-bg-size);
   }
 }

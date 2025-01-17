@@ -1,14 +1,11 @@
 .availability {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--spacer-lgr);
   font-weight: bold;
 
   @include bp(md) {
-    gap: 2.5rem;
-  }
-
-  &__title {
+    gap: var(--spacer-xl);
   }
 
   &__value {
