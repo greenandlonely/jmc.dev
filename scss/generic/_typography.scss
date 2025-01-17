@@ -4,61 +4,80 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 1rem;
-  font-weight: normal;
   font-weight: bold;
 }
 
 .text-xxl {
   font-size: $text-xxl;
   line-height: 1.2;
-  margin: 0 0 1.5rem;
+
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp(3rem, calc(2.4783rem + 1.7391vw), $text-xxl);
+  }
 }
 
 .text-xl {
   font-size: $text-xl;
-  line-height: 1.5;
+  line-height: 1.25;
+
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp($text-lg, calc(1.2989rem + 1.087vw), $text-xl);
+  }
 }
 
 .text-lg {
   font-size: $text-lg;
   line-height: 1.33;
+
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp($text-md, calc(1.1495rem + 0.5435vw), $text-lg);
+  }
 }
 
 .text-md {
   font-size: $text-md;
-  line-height: 1.5;
+  line-height: 1.6;
+
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp($text-sm, calc(1.0272rem + 0.3261vw), $text-md);
+  }
 }
 
 .text-sm {
   font-size: $text-sm;
   line-height: 1.33;
+
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp($text-xs, calc(0.9348rem + 0.2174vw), $text-sm);
+  }
 }
 
 .text-xs {
   font-size: $text-xs;
-  line-height: 1.5;
-}
+  line-height: 1.33;
 
-.text-xxs {
-  font-size: $text-xxs;
-  line-height: 1.5;
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp($text-min, calc(0.9049rem + 0.1087vw), $text-xs);
+  }
 }
 
 p,
 .p {
   font-size: $text-xs;
-  line-height: 1.55;
-}
+  line-height: 1.6;
 
-p {
-  margin: 0 0 2rem;
-
-  &:last-of-type {
-    margin: 0;
+  &.fluid-type,
+  .fluid-type & {
+    font-size: clamp($text-sm, calc(1.0272rem + 0.3261vw), $text-md);
   }
 }
 
 small {
-  font-size: $text-xxs;
+  font-size: $text-xs;
 }
