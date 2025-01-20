@@ -22,14 +22,9 @@ a {
   outline: none;
   text-decoration: underline;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--charcoal-light);
     text-decoration: none;
-  }
-
-  &[target="_blank"] {
-    cursor: alias;
   }
 }
 
