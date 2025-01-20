@@ -1,7 +1,7 @@
 .grid {
   $self: &;
   $grid-gutter--lg: 5rem;
-  $grid-gutter: $grid-gutter--lg / 2;
+  $grid-gutter: calc($grid-gutter--lg / 2);
 
   display: flex;
   flex-wrap: wrap;
