@@ -34,11 +34,6 @@
   margin: 0 !important;
 }
 
-// margin-bottom
-.mb-sm {
-  margin-bottom: var(--spacer-sm) !important;
-}
-
 // margin-top
 .mt-md {
   margin-top: var(--spacer-md) !important;
@@ -64,6 +59,9 @@
 }
 
 // margin-bottom
+.mb-sm {
+  margin-bottom: var(--spacer-sm) !important;
+}
 .mb-neg-xl {
   margin-bottom: var(--spacer-neg-xl) !important;
 }
@@ -71,6 +69,11 @@
   @include bp(lg) {
     margin-bottom: 0 !important;
   }
+}
+
+// margin-left
+.ml-sm {
+  margin-left: var(--spacer-sm) !important;
 }
 
 // gap
@@ -114,4 +117,13 @@
 }
 .delay-4 {
   animation-delay: $delay-4 !important;
+}
+
+// font-weights
+
+.fw-normal {
+  font-weight: normal !important;
+}
+.fw-bold {
+  font-weight: bold !important;
 }
