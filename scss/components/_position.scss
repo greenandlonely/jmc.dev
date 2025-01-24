@@ -1,9 +1,10 @@
 .position {
-  @include bare-list;
-  margin-bottom: var(--spacer-lgr);
+  &:not(:last-child) {
+    margin-bottom: var(--spacer-lgr);
 
-  @include bp(md) {
-    margin-bottom: var(--spacer-xl);
+    @include bp(md) {
+      margin-bottom: var(--spacer-xl);
+    }
   }
 
   &__meta {
