@@ -1,13 +1,13 @@
-.list {
+.bullet-list {
   $self: &;
 
   display: flex;
   flex-direction: column;
-  gap: var(--spacer-xxs);
+  gap: 0.33rem; //var(--spacer-xs);
   list-style: none outside none;
-  padding: 0;
+  padding-left: var(--spacer-xs);
 
-  &__item {
+  > * {
     display: flex;
     flex-shrink: 0;
     gap: var(--spacer-sm);
@@ -24,7 +24,7 @@
   }
 
   &--teal {
-    #{$self}__item {
+    > * {
       &::before {
         background-image: url(../images/dot-teal.svg);
       }
@@ -32,7 +32,7 @@
   }
 
   &--yellow {
-    #{$self}__item {
+    > * {
       &::before {
         background-image: url(../images/dot-yellow.svg);
       }
@@ -40,7 +40,7 @@
   }
 
   &--red {
-    #{$self}__item {
+    > * {
       &::before {
         background-image: url(../images/dot-red.svg);
       }
@@ -48,7 +48,7 @@
   }
 
   &--grey {
-    #{$self}__item {
+    > * {
       &::before {
         background-image: url(../images/dot-grey.svg);
       }
@@ -56,7 +56,7 @@
   }
 
   &--charcoal {
-    #{$self}__item {
+    > * {
       &::before {
         background-image: url(../images/dot-charcoal.svg);
       }
