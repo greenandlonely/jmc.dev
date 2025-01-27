@@ -4,6 +4,6 @@ module.exports = {
   entry: ["./js/viewport-height.js"],
   output: {
     path: path.resolve(__dirname, "js"),
-    filename: "bundle.js",
+    filename: "output/bundle.js",
   },
 };
