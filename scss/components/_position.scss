@@ -14,7 +14,8 @@
     gap: 0 0.75rem;
   }
 
-  &__title {
+  &__title,
+  &__type {
     background: transparent url(../images/dot-grey.svg) no-repeat center right;
     background-size: 1rem;
     padding-right: 1.75rem;
