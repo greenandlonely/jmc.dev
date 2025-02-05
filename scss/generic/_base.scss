@@ -25,6 +25,11 @@ a {
     color: var(--charcoal-light);
     text-decoration: none;
   }
+
+  &:focus {
+    outline: 0.4rem double var(--pink);
+    outline-offset: 0.125rem;
+  }
 }
 
 img {
