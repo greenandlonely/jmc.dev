@@ -14,21 +14,25 @@ layout: _default.html
         aria-hidden="true"
       />
     </a>
-    <article class="stack stack--gap-sm">
-      <h2 class="text-xxl">Hello</h2>
+    <section class="stack stack--gap-sm" aria-labelledby="intro-heading">
+      <h2 class="text-xxl" id="intro-heading">Hello</h2>
       <p class="text-xl">
         I'm James Clarke, a front-end web developer who's passionate about
         accessibility and inclusion.
       </p>
-    </article>
+    </section>
   </div>
 </div>
 
-<article class="section section--about" id="about">
+<section
+  class="section section--about"
+  id="about"
+  aria-labelledby="about-heading"
+>
   <div class="section__inner">
     <div class="grid grid--stackable grid--forward lg:grid--reverse">
       <div class="grid__col stack">
-        <h2 class="text-xxl scroll-animate">About</h2>
+        <h2 class="text-xxl scroll-animate" id="about-heading">About</h2>
         <p class="scroll-animate">
           After over 10 years honing my skills in agencies I wanted to focus on
           the elements of web development that matter to me. I launched JMC.DEV
@@ -71,12 +75,12 @@ layout: _default.html
     alt=""
     aria-hidden="true"
   />
-</article>
+</section>
 
-<article class="section section--work" id="work">
+<section class="section section--work" id="work" aria-labelledby="work-heading">
   <div class="section__inner stack">
     <div class="stack">
-      <h2 class="text-xxl scroll-animate">What I do</h2>
+      <h2 class="text-xxl scroll-animate" id="work-heading">What I do</h2>
       <div class="grid">
         <div class="grid__col lg:grid__col--50 stack">
           <h3 class="text-lg scroll-animate">
@@ -126,12 +130,18 @@ layout: _default.html
     alt=""
     aria-hidden="true"
   />
-</article>
+</section>
 
-<article class="section section--clients" id="clients">
+<section
+  class="section section--clients"
+  id="clients"
+  aria-labelledby="clients-heading"
+>
   <div class="section__inner">
     <div class="stack">
-      <h2 class="text-xxl scroll-animate">Who I do it for</h2>
+      <h2 class="text-xxl scroll-animate" id="clients-heading">
+        Who I do it for
+      </h2>
       <div class="grid grid--stackable">
         <div class="grid__col stack">
           <h3 class="text-lg scroll-animate">Web and digital agencies</h3>
@@ -211,13 +221,13 @@ layout: _default.html
     alt=""
     aria-hidden="true"
   />
-</article>
+</section>
 
 <div class="section section--contact" id="contact">
   <div class="section__inner">
     <div class="grid grid--stackable">
-      <article class="grid__col stack">
-        <h2 class="text-xxl scroll-animate">Contact</h2>
+      <section class="grid__col stack" aria-labelledby="contact-heading">
+        <h2 class="text-xxl scroll-animate" id="contact-heading">Contact</h2>
         <div class="stack stack--gap-lg">
           <h3 class="text-lg scroll-animate">Let's build something together</h3>
           <p class="scroll-animate">
@@ -231,25 +241,17 @@ layout: _default.html
             <a href="mailto:james@jmc.dev" class="inherit">james@jmc.dev</a>
           </p>
         </div>
-      </article>
+      </section>
 
-      <article class="grid__col stack">
-        <h2 class="text-xxl scroll-animate">Availability</h2>
+      <section class="grid__col stack" aria-labelledby="availability-heading">
+        <h2 class="text-xxl scroll-animate" id="availability-heading">
+          Availability
+        </h2>
 
         <dl
           class="availability"
-          aria-description="My availability for the next 3 months"
+          aria-description="My availability for work for the next 3 months"
         >
-          <div class="scroll-animate">
-            <dt class="text-lg">
-              <time datetime="2025-02">February</time>
-            </dt>
-            <dd
-              class="availability__value availability__value--available text-md"
-            >
-              Available
-            </dd>
-          </div>
           <div class="scroll-animate">
             <dt class="text-lg">
               <time datetime="2025-03">March</time>
@@ -270,8 +272,18 @@ layout: _default.html
               Available
             </dd>
           </div>
+          <div class="scroll-animate">
+            <dt class="text-lg">
+              <time datetime="2025-05">May</time>
+            </dt>
+            <dd
+              class="availability__value availability__value--available text-md"
+            >
+              Available
+            </dd>
+          </div>
         </dl>
-      </article>
+      </section>
     </div>
   </div>
 </div>
