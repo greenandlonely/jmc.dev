@@ -52,11 +52,13 @@
   &--stackable {
     flex-direction: column;
 
-    > * + * {
-      margin-block-start: var(--spacer-lg);
+    &:not(.grid--reverse):not(.lg\:grid--reverse) {
+      > * + * {
+        margin-block-start: var(--spacer-lg);
 
-      @include bp(lg) {
-        margin-block-start: 0;
+        @include bp(lg) {
+          margin-block-start: 0;
+        }
       }
     }
 
@@ -72,6 +74,14 @@
 
     @include bp(lg) {
       flex-direction: row;
+    }
+
+    &#{$self}--reverse {
+      flex-direction: column-reverse;
+
+      @include bp(lg) {
+        flex-direction: row-reverse;
+      }
     }
   }
 }
