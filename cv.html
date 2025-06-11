@@ -1,38 +1,35 @@
 ---
 layout: _simple.html
+title: "James Clarke's CV"
 ---
 
 <div class="container fluid-type d-flex direction-column gap-lgr py-xxl">
   <header>
     <h1 class="text-xl">
       James Clarke
-      <span class="text-md ml-sm"
+      <span class="text-md md:ml-sm d-block md:d-inline"
         >Front-end developer &amp; accessibility specialist</span
       >
     </h1>
 
-    <dl class="text-sm d-flex gap-md">
+    <dl
+      class="text-sm d-flex gap-sm md:gap-md direction-column sm:direction-row mt-sm"
+    >
       <dt class="visually-hidden">Location</dt>
       <dd>Worcester, UK</dd>
       <dt class="visually-hidden">Links</dt>
       <dd>
-        <a href="https://jmc.dev/" title="Link to my website homepage"
+        <a href="https://jmc.dev/" title="Website of my freelance business"
           >jmc.dev</a
         >
       </dd>
       <dd>
-        <a
-          href="https://www.github.com/greenandlonely"
-          rel="external"
-          title="External link"
+        <a href="https://www.github.com/greenandlonely" rel="external"
           >GitHub</a
         >
       </dd>
       <dd>
-        <a
-          href="https://www.linkedin.com/in/jmc-dev/"
-          rel="external"
-          title="External link"
+        <a href="https://www.linkedin.com/in/jmc-dev/" rel="external"
           >LinkedIn</a
         >
       </dd>
@@ -42,17 +39,61 @@ layout: _simple.html
   </header>
 
   <main class="d-flex direction-column gap-lgr">
-    <article class="">
-      <h2 class="text-lg">About</h2>
+    <section aria-labelledby="profile-heading">
+      <h2 class="text-lg" id="profile-heading">Profile</h2>
 
       <p class="mw-80 text-sm">
-        Highly skilled front-end developer with 15 years of experience building
-        accessible &amp; high-quality websites, apps and design systems.
+        Highly skilled and conscientious senior developer with 15 years of
+        experience and an excellent track record of providing accessible
+        front-end solutions and user experience improvements across many tech
+        stacks and frameworks. Specialist knowledge of and passion for
+        accessibility with experience of reviewing and auditing against the WCAG
+        2.2 guidelines and using assistive technology.
       </p>
-    </article>
+    </section>
 
-    <article>
-      <h2 class="visually-hidden text-lg">Technical skills</h2>
+    <section aria-labelledby="skills-heading">
+      <h2 class="visually-hidden" id="skills-heading">
+        Technical skills and experience
+      </h2>
+      <div class="columns">
+        <div>
+          <h3 class="text-md mb-xs">Core skills</h3>
+          <ul class="bullet-list bullet-list--teal text-sm">
+            <li>Semantic HTML</li>
+            <li>CSS (SCSS, BEM, Bootstrap)</li>
+            <li>Accessibility (WCAG 2.2, WAI-ARIA)</li>
+            <li>JavaScript (TypeScript, jQuery, JSON)</li>
+            <li>Web standards &amp; best practices</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-md mb-xs">Other skills &amp; experience</h3>
+          <ul class="bullet-list bullet-list--yellow text-sm">
+            <li>ReactJS, NextJS</li>
+            <li>Design systems, Storybook</li>
+            <li>PHP, C# (Razor)</li>
+            <li>Wordpress, Umbraco, 11ty, Jekyll</li>
+            <li>NPM, Webpack, Grunt</li>
+            <li>Figma, Adobe CC, Zeplin</li>
+            {% comment %}
+            <li>Liquid, Nunjucks</li>
+            <li>UX design, prototyping and wireframing</li>
+            {% endcomment %}
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-md mb-xs">Testing experience</h3>
+          <ul class="bullet-list bullet-list--red text-sm">
+            <li>JAWS, NVDA, VoiceOver, keyboard-only, Apple Zoom, TalkBack</li>
+            <li>axe DevTools, WAVE, Lighthouse</li>
+            <li>QA testing experience</li>
+          </ul>
+        </div>
+      </div>
+      {% comment %}
       <div class="grid">
         <div class="grid__col">
           <h3 class="text-md mb-xs">Languages</h3>
@@ -78,21 +119,31 @@ layout: _simple.html
         <div class="grid__col">
           <h3 class="text-md mb-xs">Approach</h3>
           <ul class="bullet-list bullet-list--red text-sm">
-            <li>Accessibility &amp; inclusion</li>
+            <li>Accessibility &amp; inclusion first</li>
             <li>Progressive enhancement</li>
             <li>Mobile-first responsive design</li>
-            <li>Agile</li>
+          </ul>
+          <h3 class="text-md mb-xs">Testing</h3>
+          <ul class="bullet-list bullet-list--red text-sm">
+            <li>Manual: JAWS, NVDA, VoiceOver, keyboard-only</li>
+            <li>Automated: axe DevTools, WAVE, Lighthouse</li>
           </ul>
         </div>
       </div>
-    </article>
+      {% endcomment %}
+    </section>
 
-    <article class="mt-sm">
-      <h2 class="text-lg mb-sm">Recent Work Experience</h2>
+    <section class="mt-sm" aria-labelledby="we-heading">
+      <h2 class="text-lg mb-sm" id="we-heading">Recent Work Experience</h2>
 
-      <ol class="bare-list">
+      <ol
+        class="bare-list"
+        aria-labelledby="My work experience, most recent first"
+      >
         <li class="position stack stack--gap-sm">
-          <h3 class="text-md">Freelance Front-end Developer</h3>
+          <h3 class="text-md">
+            Freelance front-end developer &amp; accessibility specialist
+          </h3>
 
           <dl class="position__meta text-sm">
             <dt class="visually-hidden">Employer</dt>
@@ -103,25 +154,30 @@ layout: _simple.html
 
           <ul
             class="text-sm bullet-list bullet-list--charcoal bullet-list--indent mw-80"
-            aria-label="My current duties and responsibilities as a developer and accessibility specialist"
+            aria-label="My current duties and responsibilities"
           >
             <li class="text-sm mw-80">
-              I'm a freelance/contract developer who assists dev teams with
-              their front-end projects across many tech stacks and frameworks,
-              including MVC, React.js &amp; JAM stack
+              I'm a freelance developer who assists dev teams with their
+              front-end projects across many tech stacks and frameworks,
+              including ReactJS, ASP.NET &amp; JAMStack
             </li>
             <li>
-              I also conduct accessibility testing &amp; auditing (using NVDA,
-              VoiceOver, axe DevTools, WAVE) on existing sites, reporting
-              prioritised results to stakeholders in technical and non-technical
-              roles
+              I conduct accessibility tests &amp; audits of websites and apps,
+              using automated testing tools and assistive technology, reporting
+              prioritised results and recommended solutions to stakeholders in
+              technical and non-technical roles
+            </li>
+            <li>
+              I consult with agencies and dev teams, helping them improve their
+              approach to accessibility, their WCAG knowledge and general best
+              practices
             </li>
             <li>Repeat clients include WQA (see below) and NEC Group</li>
           </ul>
         </li>
 
         <li class="position stack stack--gap-sm">
-          <h3 class="text-md">Front-end Developer</h3>
+          <h3 class="text-md">Front-end developer</h3>
 
           <dl class="position__meta text-sm">
             <dt class="visually-hidden">Employer</dt>
@@ -138,19 +194,24 @@ layout: _simple.html
           <div class="stack stack--gap-md">
             <ul
               class="text-sm bullet-list bullet-list--charcoal bullet-list--indent mw-80"
-              aria-label="My duties and responsibilities at WQA"
+              aria-label="My responsibilities and successes at WQA"
             >
               <li>
-                Designed and developed accessible, responsive, semantic, and
-                scalable UI components
+                Utilising progressive enhancement I designed and developed many
+                accessible, responsive, semantic, and scalable UI components
               </li>
               <li>
-                Built and updated design systems and components using React,
+                Built and updated design systems and components with ReactJS,
                 Typescript and Storybook
               </li>
               <li>
-                Led accessibility audits of and made significant improvements to
-                legacy sites in order to make them compliant with WCAG standards
+                As the accessibility specialist on the team I conducted audits
+                of - and made significant improvements to - legacy sites in
+                order to make them compliant with WCAG 2.1 (Level AA)
+              </li>
+              <li>
+                Led the development of a large e-commerce site, including
+                creating a brand new component library to ensure UX consistency
               </li>
               <li>
                 Designed and implemented the CSS architecture for many projects,
@@ -158,22 +219,27 @@ layout: _simple.html
               </li>
               <li>
                 Advocated for more understanding and use of both semantic HTML
-                and accessibility (WAI-ARIA)
+                and accessibility (WAI-ARIA) through presentations and
+                discussions with colleagues in design and development teams
               </li>
               <li>
                 Led code reviews and QA testing, ensuring high-quality output
                 for many large projects
               </li>
               <li>
-                Collaborated effectively with design team and clients using
-                Figma and Jira
+                Implemented UX improvements to sites, pages and components
+                through collaboration with design team
+              </li>
+              <li>
+                Collaborated effectively with clients and other departments
+                using Figma and Jira
               </li>
             </ul>
           </div>
         </li>
 
         <li class="position stack stack--gap-sm">
-          <h3 class="text-md">Senior Front-end Developer</h3>
+          <h3 class="text-md">Senior front-end developer</h3>
 
           <dl class="position__meta text-sm">
             <dt class="visually-hidden">Employer</dt>
@@ -187,30 +253,43 @@ layout: _simple.html
 
           <ul
             class="bullet-list bullet-list--charcoal bullet-list--indent text-sm mw-80"
-            aria-label="My duties and responsibilities at 1Zero Digital"
+            aria-label="My responsibilities and successes at 1Zero Digital"
           >
             <li>
-              Took wireframes or PSD mock-ups and turned them into
+              Led the entire front-end development of many website projects,
+              taking wireframes or designs and turning them into
               fully-functioning Umbraco sites
             </li>
             <li>
               Improved usability and accessibility of sites through
-              collaboration with designers, ensuring adherence to WCAG standards
+              collaboration with designers, specifically ensuring adherence to
+              WCAG
             </li>
             <li>
-              Developed a scalable component-based SCSS framework for use on all
-              in-house projects
+              Managed and maintained codebases for many large national brands,
+              including e-commerce sites with millions of monthly users
             </li>
             <li>
-              Set guidelines and code standards for colleagues and contractors
-              to follow, enforcing best practices
+              Developed a scalable and easy-to-use component-based SCSS
+              framework which was used on all in-house projects for years
+            </li>
+            <li>
+              Identified and resolved front-end issues promptly, leading to a
+              significant decrease in bug reports from users
+            </li>
+            {% comment %}
+            <li>Created and refined wireframes ... :TODO:</li>
+            {% endcomment %}
+            <li>
+              Set code guidelines/standards for colleagues and contractors to
+              follow, enforcing best practices
             </li>
             <li>Mentored junior developers through code reviews</li>
           </ul>
         </li>
 
         <li class="position stack stack--gap-sm">
-          <h3 class="text-md m-0">Front-end Developer</h3>
+          <h3 class="text-md m-0">Front-end developer</h3>
 
           <dl class="position__meta text-sm">
             <dt class="visually-hidden">Employer</dt>
@@ -224,23 +303,26 @@ layout: _simple.html
 
           <ul
             class="bullet-list bullet-list--charcoal bullet-list--indent text-sm mw-80"
-            aria-label="My duties and responsibilities at Firehoop"
+            aria-label="My responsibilities and successes at Firehoop"
           >
             <li>
-              Wrote HTML, CSS, JavaScript &amp; C# (Razor) for multiple Umbraco
+              Wrote HTML, SCSS, JavaScript &amp; C# (Razor) for multiple Umbraco
               websites
             </li>
             <li>
               Worked alone or in collaboration with designers and back-end
               developers
             </li>
-            <li>Built, tested and ran dozens of email campaigns</li>
+            <li>
+              Built, tested and ran dozens of successful HTML email campaigns,
+              each sent to 100,000+ users
+            </li>
             <li>
               Produced work exactly to the brief, on time and within budget
             </li>
           </ul>
         </li>
       </ol>
-    </article>
+    </section>
   </main>
 </div>
