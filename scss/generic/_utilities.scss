@@ -35,6 +35,11 @@
   color: inherit !important;
 }
 
+// text colours
+.fc-blue {
+  color: var(--blue) !important;
+}
+
 // spacing
 .m-0 {
   margin: 0 !important;
@@ -68,6 +73,9 @@
 }
 
 // margin-bottom
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 .mb-xs {
   margin-bottom: 2px !important;
 }
@@ -102,6 +110,9 @@
 }
 
 // padding
+.p-0 {
+  padding: 0 !important;
+}
 .py-xl {
   padding-top: var(--spacer-xl) !important;
   padding-bottom: var(--spacer-xl) !important;
@@ -189,6 +200,18 @@
 
 .bare-list {
   @include bare-list;
+}
+
+.cs-list {
+  > * {
+    display: inline-block;
+
+    &:not(:last-child) {
+      &::after {
+        content: ", ";
+      }
+    }
+  }
 }
 
 // redacted content
